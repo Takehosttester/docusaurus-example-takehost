@@ -1,12 +1,13 @@
 module.exports = {
   title: 'Edy',
   tagline: 'Documentation website',
-  url: 'https://FedericoTartarini.github.io',
-  baseUrl: '/docusaurus-example-youtube/',
+  url: 'https://takehosttester.github.io',
+  baseUrl: '/docusaurus-example-takehost/', // CRITICAL: Added this line
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'FedericoTartarini', // Usually your GitHub org/user name.
-  projectName: 'docusaurus-example-youtube', // Usually your repo name.
+  organizationName: 'takehosttester', 
+  projectName: 'docusaurus-example-takehost', 
+  trailingSlash: false, // Recommended for GitHub Pages
   themeConfig: {
     navbar: {
       title: 'EDY',
@@ -23,7 +24,7 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/takehosttester/docusaurus-example-takehost',
           label: 'GitHub',
           position: 'right',
         },
@@ -33,11 +34,6 @@ module.exports = {
       apiKey: 'e44c59d36394a26b1616e631a1c9d197',
       indexName: 'edy',
       appId: 'HXJSB0I3EO',
-
-      // Optional: see doc section bellow
-      // contextualSearch: true,
-
-      //... other Algolia params
     },
     footer: {
       style: 'dark',
@@ -45,44 +41,22 @@ module.exports = {
         {
           title: 'Documentation',
           items: [
-            {
-              label: 'Style Guide',
-              to: 'docs/',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },
+            { label: 'Style Guide', to: 'docs/' },
+            { label: 'Second Doc', to: 'docs/doc2/' },
           ],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
+            { label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus' },
+            { label: 'Discord', href: 'https://discordapp.com/invite/docusaurus' },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+            { label: 'Blog', to: 'blog' },
+            { label: 'GitHub', href: 'https://github.com/takehosttester/docusaurus-example-takehost' },
           ],
         },
       ],
@@ -94,18 +68,12 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc3',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl: 'https://github.com/takehosttester/docusaurus-example-takehost/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          editUrl: 'https://github.com/takehosttester/docusaurus-example-takehost/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
